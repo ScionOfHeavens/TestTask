@@ -24,14 +24,13 @@ def to_int(symbolic: str) -> int:
         number += ord(symbol) - offset
     return number
 
-def serialize(l:list[int], path=None) -> str| None:
+def serialize(l:list[int], path=None) -> str:
     min_simbolic_size = len(to_symbolic(max(l)))
     serialized = "".join([to_symbolic(e, min_simbolic_size) for e in l])
     serialized = str(min_simbolic_size) + serialized
-    if path == None:
-        return serialized
     with open(path, "w", encoding="ASCII") as file:
         file.write(serialized)
+    return serialized
 
 def deserialize(serialized: str=None, path=None) -> list[int]:
     desrialized = []

@@ -3,7 +3,7 @@ from random import randint
 import os
 import sys
 
-from main import serialize, deserialize
+from serializer import serialize, deserialize
 
 class SerisalizeTestCase(unittest.TestCase):
     numbers_test_amounts = [50, 100, 500, 1000]

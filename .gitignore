@@ -1,0 +1,3 @@
+*.txt
+*pycache*
+data.txt
